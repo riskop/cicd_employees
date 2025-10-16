@@ -20,3 +20,23 @@ jobs:
       - name: build with maven
         run: ./mvnw -B package
 
+  integration-test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: logolas
+        run: echo "Logolas"
+
+  build-images:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: build images
+        run: echo "build image here"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-images
+    steps:
+      - name: deploy
+        run: echo "deploy here"
