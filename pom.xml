@@ -12,7 +12,7 @@
 
     <groupId>training</groupId>
     <artifactId>employees</artifactId>
-    <version>1.0.0-${build.number}</version>
+    <version>${revision}</version>
 
     <properties>
         <mapstruct.version>1.6.3</mapstruct.version>
